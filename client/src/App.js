@@ -1,19 +1,19 @@
-import React, { Component } from "react";
-import logo from "./logo.svg";
+import React, { Component, Fragment } from "react";
+import Jumbotron from './components/jumbotronComponent/jumbotron.js'
+import Search from './components/searchComponent/search.js'
+import Results from './components/resultsComponent/results.js';
+import SavedArticles from './components/savedArticlesComponent/savedArticles.js'
 import "./App.css";
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <Fragment>
+        <Jumbotron/>
+        <Search/>
+        <Results/>
+        <SavedArticles/>
+      </Fragment>
     );
   }
 }
